@@ -17,5 +17,13 @@ minHand.style.transform=`rotate(${minDegrees}deg)`;
 const hrs=now.getHours();
 const hrDegrees=(((hrs/12))*360)+90;
 hourHand.style.transform=`rotate(${hrDegrees}deg)`;
+
+if(secDegrees===90)secondHand.style.transition='all 0s';
+else secondHand.style.transition='all 0.05s';
+
+if (minDegrees===90)minHand.style.transition='all 0s';
+else minHand.style.transition='all 0.1s';
+
+console.log('It is :'+ hrs+':'+mins+":"+seconds);
 }
 setInterval(setDate,1000)
